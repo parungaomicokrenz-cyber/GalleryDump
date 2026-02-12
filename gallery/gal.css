@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* HEADER */
+header {
+    background: #0a7f42;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NAV */
+nav {
+    background: #13a35f;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+.gallery-section {
+    display: none;   /* hide all by default */
+    padding: 20px;
+}
+
+/* SHOW ONLY CLICKED SECTION */
+#nature:target,
+#hobby:target,
+#friends:target,
+#all:target {
+    display: block;
+}
+
+/* GALLERY STYLE */
+.gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #0a7f42;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.top-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #13a35f;
+    font-weight: bold;
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    margin-top: 5%;
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 0 0 20px black;
+}
+
+.lightbox:target {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: bold;
+}
